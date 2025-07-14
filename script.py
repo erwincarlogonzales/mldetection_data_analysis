@@ -380,7 +380,7 @@ if __name__ == "__main__":
         'data/tek-screw human.csv',
         'data/long screw AI.csv',
         'data/long screw human.csv',
-        'data/washer AI.csv', # This file needs to be checked by you!
+        'data/washer AI.csv',
         'data/washer human.csv',
         'data/nut AI.csv',
         'data/nut human.csv',
@@ -403,7 +403,7 @@ if __name__ == "__main__":
 
     # Only save if the DataFrame is not empty (i.e., if some files were processed)
     if not master_df.empty:
-        output_filename = "master_data_for_analysis.csv"
+        output_filename = "master_data.csv"
         master_df.to_csv(output_filename, index=False)
         print(f"\nMaster DataFrame saved to {output_filename}")
     else:
