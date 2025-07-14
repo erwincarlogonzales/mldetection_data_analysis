@@ -175,3 +175,8 @@ if __name__ == "__main__":
     # Check unique items and system types to confirm parsing
     print("\nUnique Items:", master_df['Item'].unique())
     print("Unique System Types:", master_df['System_Type'].unique())
+    
+    # --- SAVE THE DATAFRAME TO A CSV FILE ---
+    output_filename = "master_data_for_analysis.csv"
+    master_df.to_csv(output_filename, index=False)
+    print(f"\nMaster DataFrame saved to {output_filename}")
