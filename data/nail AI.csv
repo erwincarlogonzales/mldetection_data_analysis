@@ -29,9 +29,3 @@ Round,Min,Sec,Sec/100,Defects for Round,Count 1,Count 2,Count 3,Count 4,Count 5,
 18,1,15,76,2,11,15,16,16,3,0,0,63,0.8514
 19,1,4,97,1,10,17,11,12,11,0,0,62,0.8378
 20,1,18,29,2,11,14,12,11,12,0,0,62,0.8378
-,,,,,,,,,,,,,
-notes,,,,,,,,,,,,,
-"at zoom out the model is confused between nails, riverts, defect, long screw",,,,,,,,,,,,,
-issues with FP and FN: defects are incorrectly identified (nails -> defect and vice-versa),,,,,,,,,,,,,
-objects should be positioned horizontally to assist model inference,,,,,,,,,,,,,
-objects keep rolling and confuses the model during inference,,,,,,,,,,,,,
