@@ -137,20 +137,20 @@ if __name__ == "__main__":
     # Or just list the files if they are in the current working directory.
 
     data_files = [
-        'data_gathering_v1.xlsx - nail AI.csv',
-        'data_gathering_v1.xlsx - nail human.csv',
-        'data_gathering_v1.xlsx - tek-screw AI.csv',
-        'data_gathering_v1.xlsx - tek-screw human.csv',
-        'data_gathering_v1.xlsx - long screw AI.csv',
-        'data_gathering_v1.xlsx - long screw human.csv',
-        'data_gathering_v1.xlsx - washer AI.csv',
-        'data_gathering_v1.xlsx - washer human.csv',
-        'data_gathering_v1.xlsx - nut AI.csv',
-        'data_gathering_v1.xlsx - nut human.csv',
-        'data_gathering_v1.xlsx - black screw AI.csv',
-        'data_gathering_v1.xlsx - black human.csv',
-        'data_gathering_v1.xlsx - rivet screw AI.csv',
-        'data_gathering_v1.xlsx - rivet human.csv'
+        'data/black human.csv',
+        'data/black screw AI.csv',
+        'data/long screw AI.csv',
+        'data/long screw human.csv',
+        'data/nail AI.csv',
+        'data/nail human.csv',
+        'data/nut AI.csv',
+        'data/nut human.csv',
+        'data/rivet human.csv',
+        'data/rivet screw AI.csv',
+        'data/tek-screw AI.csv',
+        'data/tek-screw human.csv',
+        'data/washer AI.csv',
+        'data/washer human.csv'
     ]
 
     # Create a list of full file paths
