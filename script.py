@@ -177,6 +177,6 @@ if __name__ == "__main__":
     print("Unique System Types:", master_df['System_Type'].unique())
     
     # --- SAVE THE DATAFRAME TO A CSV FILE ---
-    output_filename = "master_data_for_analysis.csv"
+    output_filename = "master_data.csv"
     master_df.to_csv(output_filename, index=False)
     print(f"\nMaster DataFrame saved to {output_filename}")
