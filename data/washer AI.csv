@@ -33,4 +33,5 @@ Round,Min,Sec,Sec/100,Defects for Round,Count 1,Count 2,Observed Total Count for
 notes,,,,,,,,
 "break, took messenger call",,,,,,,,
 divided counts by 2 sets to avoid losing count,,,,,,,,
-removed defects (model cannot find them),,,,,,,,
+model cannot detect defects because they are not pronounced and are very subtle,,,,,,,,
+defects were identified by the human,,,,,,,,
