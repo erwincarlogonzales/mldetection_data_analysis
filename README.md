@@ -53,7 +53,7 @@ This repository contains the complete data analysis for a research study examini
 
 ### Accuracy Distribution Analysis  
 ![Accuracy per Round boxplot chart showing detection accuracy patterns](Accuracy_per_Round_boxplot.png)
-(Accuracy_per_Round_boxplot.png)
+![Accuracy per Round boxplot chart showing detection accuracy patterns](Accuracy_per_Round_boxplot.png)
 
 **Key Insights**: Humans demonstrate tight accuracy distributions except for nails, where AI provides crucial assistance.
 
