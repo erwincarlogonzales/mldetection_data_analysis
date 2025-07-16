@@ -20,19 +20,19 @@ This repository contains the complete data analysis for a research study examini
 
 ### ⚡ Speed Trade-offs
 - **AI assistance provided speed benefits in only 4 out of 7 cases**
-- Best AI performance: Washers (46% faster) and Nuts (45% faster)  
+- Best AI performance: Washers (46% faster) and Nuts (45% faster)  
 - Worst AI performance: Black screws (31% slower) and Nails (51% slower)
 
 ### 🔍 Quality Control Reality Check
 - **Humans consistently superior at defect detection**
-- Human advantage ranges from 14% to 128% more defects detected
+- For all significant comparisons, the human advantage ranged from **79% to 128%** more defects detected
 - AI systems missed 30-60% of actual defects in complex objects
 
 ## 📊 Dataset Overview
 
 ### Objects Tested
 - **Black screws** - Complex, irregular shapes
-- **Long screws** - Cylindrical, medium complexity  
+- **Long screws** - Cylindrical, medium complexity  
 - **Nails** - Linear, challenging orientations
 - **Nuts** - Uniform, geometric shapes
 - **Rivets** - Small, consistent form factor
@@ -51,7 +51,7 @@ This repository contains the complete data analysis for a research study examini
 
 **Key Insights**: AI-assisted systems show more consistent timing but aren't always faster.
 
-### Accuracy Distribution Analysis  
+### Accuracy Distribution Analysis  
 ![Accuracy per Round boxplot chart showing detection accuracy patterns](Accuracy_per_Round_boxplot.png)
 
 **Key Insights**: Humans demonstrate tight accuracy distributions except for nails, where AI provides crucial assistance.
@@ -163,10 +163,6 @@ This work contributes to the growing literature on human-AI collaboration by:
 2. **Identifying context-dependent factors** that determine AI assistance effectiveness  
 3. **Providing practical frameworks** for optimal human-AI system selection
 4. **Highlighting quality control implications** of AI-assisted detection systems
-
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit issues, feature requests, or pull requests.
 
 ### Areas for Future Work
 - **Environmental variation testing** (lighting, backgrounds, orientations)
