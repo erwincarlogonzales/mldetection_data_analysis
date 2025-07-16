@@ -73,7 +73,38 @@ This repository contains the complete data analysis for a research study examini
 - **Effect sizes predominantly large to huge** (Cohen's d > 0.8)
 - **Strongest effects**: Rivet accuracy (d = 4.25), Tek-screw defect detection (d = 3.37)
 
-*[INSERT: Statistical significance summary table or visualization]*
+### Statistically Significant Results
+
+#### 🎯 Accuracy
+
+| Object | Winner | p-value | Effect Size (d) |
+| :--- | :--- | :--- | :--- |
+| Tek-screw | **Human** | < 0.001 | 3.53 (Huge) |
+| Long screw | **Human** | < 0.001 | 3.08 (Huge) |
+| Washer | **Human** | < 0.001 | 3.49 (Huge) |
+| Black screw | **Human** | < 0.001 | 2.34 (Large) |
+| Rivet | **Human** | < 0.001 | 4.25 (Huge) |
+| Nail | **AI-assisted** | 0.001 | -1.27 (Large) |
+
+---
+#### ⏱️ Efficiency (Time)
+
+| Object | Winner | p-value | Effect Size (d) |
+| :--- | :--- | :--- | :--- |
+| Washer | **AI-assisted** | < 0.001 | 1.50 (Large) |
+| Nut | **AI-assisted** | < 0.001 | 1.93 (Large) |
+| Rivet | **AI-assisted** | < 0.001 | 2.42 (Large) |
+| Black screw | **Human** | 0.011 | -0.85 (Medium) |
+
+---
+#### 🔍 Defect Detection
+
+| Object | Winner | p-value | Effect Size (d) |
+| :--- | :--- | :--- | :--- |
+| Tek-screw | **Human** | < 0.001 | 3.37 (Huge) |
+| Long screw | **Human** | < 0.001 | 2.26 (Large) |
+| Black screw | **Human** | < 0.001 | 1.76 (Large) |
+| Rivet | **Human** | < 0.001 | 3.37 (Huge) |
 
 ## 🏗️ Repository Structure
 
