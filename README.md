@@ -52,7 +52,8 @@ This repository contains the complete data analysis for a research study examini
 **Key Insights**: AI-assisted systems show more consistent timing but aren't always faster.
 
 ### Accuracy Distribution Analysis  
-*[INSERT: Accuracy per Round boxplot chart showing detection accuracy patterns]*
+![Accuracy per Round boxplot chart showing detection accuracy patterns](Accuracy_per_Round_boxplot.png)
+(Accuracy_per_Round_boxplot.png)
 
 **Key Insights**: Humans demonstrate tight accuracy distributions except for nails, where AI provides crucial assistance.
 
