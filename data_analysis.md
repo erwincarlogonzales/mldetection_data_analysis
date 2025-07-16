@@ -36,7 +36,7 @@ The analysis reveals a counterintuitive pattern wherein human-only systems demon
 
 The boxplot analysis (Figure 4.1) reveals distinct accuracy distribution patterns between system types. Human-only systems demonstrated extremely tight accuracy distributions for most object types, with minimal inter-quartile ranges and few outliers. Conversely, human-in-the-loop systems showed greater variability across all object categories, suggesting that AI assistance may introduce inconsistency in detection performance.
 
-The nail detection task presented a notable exception, where human performance exhibited extreme variability (0-100% range) while AI-assisted performance remained consistently around 89%. This pattern indicates that nails represent a particularly challenging object type for human-only detection but respond well to AI assistance.
+The nail detection task presented a notable exception, where human performance exhibited extreme variability (0-100% range) while AI-assisted performance remained consistently around 89%. This pattern suggests that nails may present a unique **visual segmentation challenge** for human operators, a hypothesis explored further in Section 4.7.
 
 ## 4.4 Efficiency Performance Analysis
 
@@ -57,9 +57,9 @@ The efficiency analysis reveals a heterogeneous pattern of AI assistance effects
 
 ### 4.4.2 Temporal Performance Consistency
 
-The time performance visualization (Figure 4.2) demonstrates that human-in-the-loop systems consistently exhibit more predictable completion times, evidenced by tighter boxplot distributions and smaller inter-quartile ranges. Human-only systems showed substantial temporal variability, particularly for complex objects like tek-screws and nails, with standard deviations ranging from 28.52s to 73.90s compared to AI-assisted ranges of 13.45s to 58.95s.
+The time performance visualization (Figure 4.2) demonstrates that human-in-the-loop systems consistently exhibit more predictable completion times, evidenced by tighter boxplot distributions and smaller inter-quartile ranges. Human-only systems showed substantial temporal variability, particularly for complex objects like tek-screws and nails.
 
-This pattern suggests that while AI assistance may not always improve speed, it provides more consistent and predictable task completion times, which has implications for workflow planning and resource allocation.
+This pattern suggests that while AI assistance may not always improve speed, it provides more consistent and predictable task completion times. This effect may be due to the AI offloading some of the **cognitive load** associated with the task, leading to a more regularized workflow, which has implications for planning and resource allocation.
 
 ## 4.5 Defect Detection Performance
 
@@ -68,15 +68,15 @@ This pattern suggests that while AI assistance may not always improve speed, it 
 The defect detection analysis reveals the most pronounced performance gap between system types, with human-only systems demonstrating systematic superiority across all object categories where differences were observed.
 
 **Human-only systems demonstrated superior defect detection for:**
-- Tek-screws: 14.6 vs. 6.4 defects (+128% detection rate)
-- Rivets: 9.8 vs. 4.3 defects (+128% detection rate)
-- Long screws: 6.0 vs. 3.3 defects (+82% detection rate)
-- Black screws: 5.0 vs. 2.8 defects (+79% detection rate)
-- Nails: 2.1 vs. 1.85 defects (+14% detection rate)
+- Tek-screws: 14.6 vs. 6.4 defects
+- Rivets: 9.8 vs. 4.3 defects
+- Long screws: 6.0 vs. 3.3 defects
+- Black screws: 5.0 vs. 2.8 defects
+- Nails: 2.1 vs. 1.85 defects
 
 **Equivalent defect detection performance was observed for:**
-- Nuts: 3.0 vs. 3.0 defects (no difference)
-- Washers: 3.0 vs. 3.0 defects (no difference)
+- Nuts: 3.0 vs. 3.0 defects
+- Washers: 3.0 vs. 3.0 defects
 
 ### 4.5.2 Ground Truth Comparison
 
@@ -88,68 +88,60 @@ Human-in-the-loop systems showed systematic under-detection of defects:
 - **Severe under-detection**: Tek-screws (6.4 vs. 14 ground truth), Rivets (4.3 vs. 10)
 - **Moderate under-detection**: Long screws (3.3 vs. 6), Black screws (2.8 vs. 5)
 
-This pattern indicates that AI assistance systematically reduces defect detection capability, potentially missing 30-60% of actual defects present in the objects.
+This pattern indicates that AI assistance systematically reduces defect detection capability, potentially missing 30-60% of actual defects present in the objects. The poor performance of both systems on nails suggests the **subtlety of the defects** on that object type may be a key confounding variable.
 
 ## 4.6 Statistical Significance Analysis
 
-### 4.6.1 Hypothesis Testing Results
+### 4.6.1 Significant Findings
 
-Independent samples t-tests were conducted to evaluate the statistical significance of observed performance differences. Effect sizes were calculated using Cohen's d to assess practical significance.
+Independent samples t-tests confirmed that most observed performance differences were statistically significant (p < 0.05).
 
-**Statistically significant accuracy differences (p < 0.05) favoring human-only systems:**
-- Tek-screws: t = 11.18, p < 0.001, Cohen's d = 3.53 (huge effect)
-- Long screws: t = 9.73, p < 0.001, Cohen's d = 3.08 (huge effect)
-- Washers: t = 11.03, p < 0.001, Cohen's d = 3.49 (huge effect)
-- Black screws: t = 7.41, p < 0.001, Cohen's d = 2.34 (large effect)
-- Rivets: t = 13.43, p < 0.001, Cohen's d = 4.25 (huge effect)
+* **Accuracy**: Statistically significant differences favoring the human-only system were found for tek-screws, long screws, washers, black screws, and rivets. The AI-assisted system's accuracy advantage for nails was also statistically significant.
+* **Efficiency**: The AI-assisted system was significantly faster for washers, nuts, and rivets, while the human-only system was significantly faster for black screws.
+* **Defect Detection**: The human operator's superiority was statistically significant for tek-screws, rivets, long screws, and black screws.
 
-**Statistically significant accuracy differences favoring human-in-the-loop systems:**
-- Nails: t = -4.01, p = 0.001, Cohen's d = -1.27 (large effect)
+### 4.6.2 Non-Significant Findings and Their Implications
 
-### 4.6.2 Effect Size Interpretation
+The cases where statistical significance was not found are equally instructive. No significant difference in efficiency was found for nails, tek-screws, or long screws, likely due to high variance in human operator performance. Crucially, **there was no statistically significant difference in defect detection for nails (p = 0.701)**. Despite a small difference in the mean values (2.1 vs 1.85), the high p-value indicates this gap is attributable to random chance. This finding revises the initial interpretation, suggesting that for the most challenging defects, both systems performed equally poorly.
 
-The effect sizes observed in this study are predominantly large to huge (Cohen's d > 0.8), indicating that the performance differences between system types represent substantial, practically meaningful variations rather than minor statistical artifacts. Fifteen out of eighteen testable comparisons demonstrated statistical significance with large effect sizes, providing robust evidence for systematic performance differences between human-only and human-in-the-loop detection systems.
+### 4.6.3 Effect Size and Overall Interpretation
+
+The effect sizes for significant findings were predominantly large to huge (Cohen's d > 0.8), indicating that the performance differences represent substantial, practically meaningful variations. The statistical tests provide robust evidence for systematic performance differences, while also revealing where apparent differences were not statistically meaningful, thereby refining the overall conclusions.
 
 ## 4.7 Object-Specific Performance Profiles
 
 ### 4.7.1 Nails: Optimal AI Assistance Context
 
-Nail detection represents the singular case where human-in-the-loop systems provided comprehensive performance improvement. The substantial accuracy improvement (44% to 89%) with moderate efficiency trade-off (60.20s to 90.75s) suggests that nails present optimal conditions for beneficial human-AI collaboration. Qualitative observations indicate that the AI model experienced confusion between nails, rivets, and defects, particularly at reduced zoom levels, yet still significantly improved overall detection accuracy.
+Nail detection represents the singular case where human-in-the-loop systems provided a clear, statistically significant accuracy improvement (44% to 89%). This suggests that tasks involving high human perceptual difficulty, such as segmenting thin, overlapping objects, may be optimal contexts for AI collaboration, even if efficiency or defect detection does not improve.
 
 ### 4.7.2 Washers and Nuts: Efficiency-Optimized Contexts
 
-Both washer and nut detection demonstrated favorable efficiency profiles for human-in-the-loop systems. Washers showed the most dramatic efficiency improvement (46.4% time reduction) with minimal accuracy degradation (3 percentage points), while nuts provided substantial time savings (45.3%) with essentially equivalent accuracy. These performance profiles suggest that simple, uniform objects with consistent visual features present optimal conditions for AI-assisted detection.
+Both washer and nut detection demonstrated favorable efficiency profiles for human-in-the-loop systems. Washers showed the most dramatic efficiency improvement (46.4% time reduction) with minimal accuracy degradation (3 percentage points), while nuts provided substantial time savings (45.3%) with essentially equivalent accuracy. These profiles suggest that simple, uniform objects present optimal conditions for AI-assisted efficiency gains.
 
 ### 4.7.3 Complex Objects: Human-Only Advantages
 
-Black screws, tek-screws, and rivets consistently favored human-only systems across multiple performance dimensions. These objects showed both accuracy and defect detection advantages for human-only systems, with black screws additionally demonstrating efficiency benefits. Qualitative observations identified specific challenges for AI systems including horizontal orientation detection difficulties, occlusion handling problems, and inter-object confusion.
+Black screws, tek-screws, and rivets consistently favored human-only systems across multiple performance dimensions. These objects showed significant accuracy and defect detection advantages for human-only systems. Qualitative observations identified specific challenges for the AI including horizontal orientation detection, occlusion handling, and inter-object confusion.
 
 ## 4.8 Performance Trade-off Analysis
 
 ### 4.8.1 Accuracy-Efficiency Trade-offs
 
-The analysis reveals complex trade-off relationships between accuracy and efficiency that vary significantly by object type. While human-in-the-loop systems occasionally provide efficiency improvements, these gains frequently occur at the expense of detection accuracy. The magnitude and direction of these trade-offs suggest that optimal system selection should be context-dependent based on task priorities and object characteristics.
+The analysis reveals complex trade-off relationships between accuracy and efficiency that vary significantly by object type. While human-in-the-loop systems occasionally provide efficiency improvements, these gains frequently occur at the expense of detection accuracy. The magnitude and direction of these trade-offs suggest that optimal system selection must be context-dependent.
 
 ### 4.8.2 Quality Control Implications
 
-For applications where defect detection is paramount, the data strongly supports human-only system utilization. The consistent superiority of human defect detection across object categories, combined with near-perfect alignment with ground truth values, indicates that current AI assistance may interfere with critical quality assessment processes. Organizations prioritizing quality control should carefully evaluate whether the efficiency gains from AI assistance justify the substantial reductions in defect detection capability.
+For applications where defect detection is paramount, the data strongly supports human-only system utilization. The consistent and statistically significant superiority of human defect detection across most categories indicates that the tested AI assistance interferes with critical quality assessment. However, the finding that neither system could reliably detect defects on nails suggests that certain defect types may require entirely different inspection protocols.
 
 ## 4.9 Summary of Findings
 
 The empirical analysis challenges the assumption that AI assistance universally improves human performance in object detection tasks. Key findings include:
 
-1. **Context-dependent accuracy performance**: Human-only systems demonstrated superior accuracy in 71% of object categories (5 of 7), with statistically significant large to huge effect sizes.
-
-2. **Inconsistent efficiency improvements**: AI assistance provided speed benefits in 57% of cases (4 of 7), but these gains varied dramatically by object type and often came with accuracy costs.
-
-3. **Systematic defect detection superiority**: Human-only systems consistently outperformed AI-assisted systems in defect identification, with improvement rates ranging from 14% to 128% and near-perfect alignment with ground truth values.
-
-4. **Performance consistency patterns**: While AI assistance provided more consistent completion times, it introduced greater variability in accuracy and defect detection performance.
-
-5. **Object complexity effects**: Simple, uniform objects (washers, nuts) benefited from AI assistance, while complex or irregular objects (black screws, tek-screws, rivets) favored human-only approaches.
+1.  **Context-dependent accuracy performance**: Human-only systems demonstrated superior, statistically significant accuracy in 5 of 7 object categories.
+2.  **Inconsistent efficiency improvements**: AI assistance provided significant speed benefits in 4 of 7 cases, but these gains often came with accuracy costs.
+3.  **Systematic defect detection superiority**: Human-only systems significantly outperformed AI-assisted systems in defect identification for most items. For the most challenging defects (nails), both systems failed equally.
+4.  **Performance consistency patterns**: AI assistance provided more consistent completion times but introduced greater variability in accuracy.
+5.  **Object complexity effects**: Simple objects (washers, nuts) benefited from AI assistance, while complex objects (black screws, tek-screws, rivets) favored human-only approaches.
 
 ## 4.10 Chapter Conclusion
 
-The comparative analysis presented in this chapter provides empirical evidence for the complex and context-dependent nature of human-AI collaboration in object detection tasks. The results demonstrate that effective integration of AI assistance requires nuanced understanding of task characteristics, performance priorities, and object-specific factors rather than universal AI integration strategies. The findings suggest that the "AI assistance always helps" paradigm requires reconsideration in favor of more sophisticated human-AI collaboration frameworks that account for task context and performance trade-offs.
-
-These results have significant implications for both theoretical understanding of human-AI collaboration and practical implementation of AI-assisted detection systems in industrial and quality control applications. The subsequent chapter will discuss the theoretical implications of these findings and their relevance to existing human-AI collaboration frameworks.
+The comparative analysis presented in this chapter provides empirical evidence for the complex and context-dependent nature of human-AI collaboration in object detection tasks. The results demonstrate that effective integration of AI assistance requires a nuanced understanding of task characteristics, performance priorities, and object-specific factors. The findings suggest that the "AI assistance always helps" paradigm requires reconsideration in favor of more sophisticated frameworks that account for performance trade-offs and the statistical significance of observed outcomes. The subsequent chapter will discuss the theoretical implications of these findings and their relevance to existing human-AI collaboration frameworks.
