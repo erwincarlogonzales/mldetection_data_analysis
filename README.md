@@ -23,7 +23,7 @@ This study fundamentally challenges the widespread assumption that AI assistance
 ### **The Research Question That Changes Everything**
 > *"Does AI assistance always improve human performance in object detection tasks?"*
 
-**Our Answer**: **ABSOLUTELY NOT.** The relationship is complex, context-dependent, and often counterintuitive.
+**The Answer**: **ABSOLUTELY NOT.** The relationship is complex, context-dependent, and often counterintuitive.
 
 ---
 
@@ -267,7 +267,7 @@ This research demonstrates mastery across multiple domains:
 
 ---
 
-## 📞 **Connect & Collaborate**
+## 🖧 **Connect & Collaborate**
 
 This work opens critical questions about the future of human-AI collaboration and has immediate applications for technology deployment decisions across industries.
 
