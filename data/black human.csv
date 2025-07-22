@@ -1,0 +1,43 @@
+Item,black,,,,,,
+Type,human,,,,,,
+,,,,,,,
+Ground Truth,,,,,,,
+number of objects,131,,,,,,
+number of defects,5,,,,,,
+number of rounds,20,,,,,,
+GT Grand Total Count,2720,,,,,,
+Observed Grand Total Count,2804,,,,,,
+,,,,,,,
+Round,Min,Sec,Sec/100,Defects for Round,Count 1,Observed Total Count for Round,Accuracy for Round
+1,2,40,36,5,136,141,1.0368
+2,2,42,40,5,136,141,1.0368
+3,2,22,87,5,134,139,1.0221
+4,1,38,14,5,134,139,1.0221
+5,2,1,47,5,134,139,1.0221
+6,1,3,40,5,138,143,1.0515
+7,1,59,93,5,138,143,1.0515
+8,2,3,93,5,134,139,1.0221
+9,2,40,2,5,134,139,1.0221
+10,1,32,71,5,136,141,1.0368
+11,1,4,81,5,136,141,1.0368
+12,3,9,87,5,134,139,1.0221
+13,2,6,68,5,134,139,1.0221
+14,2,8,72,5,136,141,1.0368
+15,4,6,86,5,136,141,1.0368
+16,2,54,94,5,136,141,1.0368
+17,2,47,68,5,134,139,1.0221
+18,2,56,76,5,134,139,1.0221
+19,2,54,71,5,134,139,1.0221
+20,2,46,83,5,136,141,1.0368
+,,,,,,,
+notes,,,,,,,
+nagiingat ako habang nag biilang,,,,,,,
+nakkatamad,,,,,,,
+nakkapagod,,,,,,,
+nag bukas ako ng lollipop,,,,,,,
+laging nallalaglag,,,,,,,
+inaantok,,,,,,,
+nakkangalay,,,,,,,
+nagkamali ako,,,,,,,
+lima lima ang bilang ko,,,,,,,
+,,,,,,,
