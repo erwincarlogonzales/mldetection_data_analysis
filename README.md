@@ -10,7 +10,7 @@
 
 *Comprehensive statistical analysis of 280 controlled experiments revealing when AI assistance helps versus hurts human performance*
 
-**🚨 PARADIGM-SHIFTING FINDING: Humans outperformed AI-assisted systems in 71% of object detection tasks**
+**🚨 RESEARCH FINDING: Humans outperformed AI-assisted systems in 71% of object detection tasks**
 
 </div>
 
