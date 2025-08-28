@@ -10,7 +10,7 @@
 
 *Comprehensive statistical analysis of 280 controlled experiments revealing when AI assistance helps versus hurts human performance*
 
-**🚨 RESEARCH FINDING: Humans outperformed AI-assisted systems in 71% of object detection tasks**
+**🚨 RESEARCH FINDING: In 71% of all statistically significant comparisons, the human-only system outperformed the AI-assisted system.**
 
 </div>
 
@@ -95,9 +95,9 @@ This study fundamentally challenges the widespread assumption that AI assistance
 ## 🔬 **Statistical Rigor**
 
 ### **Significance Testing Results**
-- **83% of comparisons** showed statistical significance (15/18, p < 0.05)
-- **Effect sizes predominantly large to huge** (Cohen's d > 0.8)
-- **Strongest effects**: Rivet accuracy (d = 4.25), Tek-screw defect detection (d = 3.37)
+- **74% of testable comparisons** showed statistical significance (14 out of 19, p < 0.05).
+- **Effect sizes were predominantly large to huge** (Cohen's d > 0.8).
+- **Strongest effects**: Rivet accuracy (d = 4.25) and Tek-screw defect detection (d = 3.37).
 
 ### **Performance Winners by Category**
 
